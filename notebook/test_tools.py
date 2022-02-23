@@ -1,4 +1,5 @@
 import time
+import pandas as pd
 
 
 class TestExecutor(object):
@@ -64,3 +65,15 @@ class TestExecutor(object):
             テスト結果
         """
         return {filepath: self.__measure_process_time(f, filepath) for filepath in filepath_list}
+
+    def show_result(self, result_dict):
+        """
+        テスト結果を表示するメソッド
+
+        Parameters
+        ----------
+        result_dict : dict
+            テスト結果
+        """
+        result_df = pd.DataFrame(result_dict)
+        return result_df.describe()
