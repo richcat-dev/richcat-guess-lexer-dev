@@ -1,7 +1,23 @@
+# Editor
+## Main
 jupyterlab
-matplotlib
+
+## Extensions
+jupyterlab_widgets
+lckr-jupyterlab-variableinspector
+ipywidgets
+
+# Libraries
+
+## Numerical
 numpy
 pandas
+
+## Utility
 tqdm
 
+## Graph
+matplotlib
+
+# Tareget
 rich == 11.1.0
