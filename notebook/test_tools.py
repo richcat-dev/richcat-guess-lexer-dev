@@ -1,5 +1,6 @@
 import time
 import pandas as pd
+from tqdm.auto import tqdm
 
 
 class TestExecutor(object):
@@ -64,7 +65,7 @@ class TestExecutor(object):
         _ : dict
             テスト結果
         """
-        return {filepath: self.__measure_process_time(f, filepath) for filepath in filepath_list}
+        return {filepath: self.__measure_process_time(f, filepath) for filepath in tqdm(filepath_list)}
 
     def show_result(self, result_dict):
         """
